@@ -104,7 +104,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <button onClick={toggleConversation}>
-          {isCalling ? "Stop" : "Start"}
+          {isCalling ? "Stop call" : "Start call"}
         </button>
             <div className="bg">
             <div></div>

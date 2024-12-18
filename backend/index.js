@@ -4,7 +4,6 @@ const cors = require('cors');
 const app = express();
 const port = 8080;
 
-// Middleware to parse JSON bodies
 app.use(cors());
 
 app.use(express.json());
@@ -12,10 +11,8 @@ app.use(express.json());
 app.post('/create-web-call', async (req, res) => {
     const { agent_id, metadata, retell_llm_dynamic_variables } = req.body;
 
-    // Prepare the payload for the API request
     const payload = { agent_id };
 
-    // Conditionally add optional fields if they are provided
     if (metadata) {
         payload.metadata = metadata;
     }
@@ -30,7 +27,7 @@ app.post('/create-web-call', async (req, res) => {
             payload,
             {
                 headers: {
-                    'Authorization': 'Bearer key_6b5d35c465e3e74ec4cd4f4de01a', // Replace with your actual Bearer token
+                    'Authorization': 'Bearer key_6b5d35c465e3e74ec4cd4f4de01a', 
                     'Content-Type': 'application/json',
                 },
             }
@@ -43,10 +40,6 @@ app.post('/create-web-call', async (req, res) => {
     }
 });
 
-<<<<<<< HEAD
-=======
-// Start the server
->>>>>>> 7ab68a006c9923feaee75264826173e569b3f6b3
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
