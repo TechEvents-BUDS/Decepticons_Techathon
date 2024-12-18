@@ -43,6 +43,10 @@ app.post('/create-web-call', async (req, res) => {
     }
 });
 
+<<<<<<< HEAD
+=======
+// Start the server
+>>>>>>> 7ab68a006c9923feaee75264826173e569b3f6b3
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
